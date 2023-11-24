@@ -1,0 +1,47 @@
+.container {
+	width: 400px;
+	height: 150px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.win1 {
+	width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #872d62;
+    z-index: 3;
+    border: 3px solid #651142;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+}
+
+.win2 {
+	width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: #872d62;
+    z-index: 2;
+    right: 0;
+    border: 3px solid #651142;
+    background-size: cover;
+    background-position: top right;
+    transition: transform 0.5s ease;
+    box-sizing: border-box;
+}
+
+.text {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 1;
+    margin: 15% 0 0 42%;
+}
+
+.container:hover > .win2{
+	 transform: perspective(400px) rotateY(-45deg);
+}
+
+.container:hover > .win1{
+	 transform: perspective(400px) rotateY(45deg);
+}
